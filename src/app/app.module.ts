@@ -17,13 +17,15 @@ import { EditTodoComponent } from './containers/edit-todo/edit-todo.component';
 import { TodoComponent } from './components/todo/todo.component';
 
 import { reducer } from "./reducers/app.reducer";
+import { LoginComponent } from './containers/login/login.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TodoListComponent,
     EditTodoComponent,
-    TodoComponent
+    TodoComponent,
+    LoginComponent
   ],
   imports: [
     // Angular

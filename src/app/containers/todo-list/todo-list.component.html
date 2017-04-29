@@ -1,4 +1,4 @@
-<h2 class="title">Someone's TODO List</h2>
+<h2>Someone's TODO List</h2>
 <div>
   <app-todo [todo]="(todos$ | async).entities[id]" *ngFor="let id of (todos$ | async).ids"></app-todo>
 </div>
