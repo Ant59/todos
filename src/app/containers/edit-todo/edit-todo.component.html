@@ -1,3 +1,35 @@
-<p>
-  edit-todo works!
-</p>
+<h2>Task Editor</h2>
+<form>
+  <div class="container">
+    <div class="form_group">
+      <label for="name">Task <small>e.g. Buy Groceries</small></label>
+      <input type="text" id="name">
+    </div>
+
+    <div class="horiz">
+      <div class="form_group">
+        <label>Date <small>e.g. 2017/10/20</small></label>
+        <div class="date">
+          <input type="text" id="year" placeholder="YYYY" maxlength="4">
+          <span>/</span>
+          <input type="text" id="month" placeholder="MM" maxlength="2">
+          <span>/</span>
+          <input type="text" id="day" placeholder="DD" maxlength="2">
+        </div>
+      </div>
+
+      <div class="form_group">
+        <label>Time <small>e.g. 18:45</small></label>
+        <div class="time">
+          <input type="text" id="hour" placeholder="HH">
+          <span>:</span>
+          <input type="text" id="min" placeholder="MM">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="actions">
+    <a routerLink="/" class="button">Cancel</a>
+    <a (click)="create($event)" class="button">Save Task</a>
+  </div>
+</form>
