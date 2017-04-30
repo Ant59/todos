@@ -10,7 +10,7 @@ import { EditTodoComponent } from './containers/edit-todo/edit-todo.component';
     RouterModule.forRoot([
       { path: '', component: TodoListComponent },
       { path: 'login', component: LoginComponent },
-      { path: 'edit', component: EditTodoComponent },
+      { path: 'edit/:id', component: EditTodoComponent },
       { path: 'new', component: EditTodoComponent },
       //{ path: '**', component: PageNotFoundComponent }
     ])

@@ -1,4 +1,4 @@
-import { Component, OnInit, ChangeDetectionStrategy, Input } from '@angular/core';
+import { Component, ChangeDetectionStrategy, Input, Output, EventEmitter } from '@angular/core';
 
 import { Todo } from '../../models/todo.model';
 
@@ -8,12 +8,14 @@ import { Todo } from '../../models/todo.model';
   styleUrls: ['./todo.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class TodoComponent implements OnInit {
+export class TodoComponent {
   @Input() todo: Todo;
+  @Output() edit = new EventEmitter();
+  @Output() delete = new EventEmitter();
+  @Output() done = new EventEmitter();
 
   constructor() { }
 
-  ngOnInit() {
-  }
+  // This should definitely use a date object
 
 }

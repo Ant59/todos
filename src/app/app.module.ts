@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { Store, StoreModule, combineReducers, provideStore } from '@ngrx/store';
@@ -30,7 +30,7 @@ import { LoginComponent } from './containers/login/login.component';
   imports: [
     // Angular
     BrowserModule,
-    FormsModule,
+    ReactiveFormsModule,
     HttpModule,
     // Store
     StoreModule.provideStore(reducer),

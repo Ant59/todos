@@ -1,4 +1,6 @@
-import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
+import { FormBuilder, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -6,11 +8,23 @@ import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
   styleUrls: ['./login.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class LoginComponent implements OnInit {
+export class LoginComponent {
+  public loginForm = this.fb.group({
+    username: ['', Validators.compose([
+      Validators.required,
+      Validators.email])],
+    password: ['', Validators.required]
+  })
 
-  constructor() { }
+  constructor(
+    private router: Router,
+    private fb: FormBuilder
+  ) { }
 
-  ngOnInit() {
+  login() {
+    // TODO: Auth
+    console.log("Login");
+    this.router.navigate(['/']);
   }
 
 }

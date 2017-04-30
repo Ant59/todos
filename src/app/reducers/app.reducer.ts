@@ -12,6 +12,7 @@ import * as fromTodos from "./todos.reducer";
 export interface State {
   router: fromRouter.RouterState;
   todos: fromTodos.State;
+  // TODO: Add auth state
 };
 
 const reducers = {
